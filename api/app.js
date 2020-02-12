@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 
-const mongoose = require('./db/mongoose');
+const { mongoose } = require('./db/mongoose');
+mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true});
 
 const bodyParser = require('body-parser');
 
@@ -63,8 +64,79 @@ app.patch('/lists/:id', (req, res) => {
  */
 app.delete('/lists/:id', (req, res) => {
   // delete the specified list (using id in the url)
+  List.findOneAndRemove({
+    _id: req.params.id
+  }).then((removedListDoc) => {
+    res.send(removedListDoc);
+  });
 });
 
-app.listen(3000, () => {
-  console.log('server is listening on port 3000');
+/**
+ * GET /lists/:listId/tasks
+ * Purpose: Get all tasks in a specific list
+ */
+app.get('/lists/:listId/tasks', (req, res) => {
+  // return all tasks that belong to a specific list
+  Task.find({
+    _listId: req.params.listId
+  }).then((tasks) => {
+    res.send(tasks);
+  })
 });
+
+// app.get('/lists/:listId/tasks/:taskId', (req, res) => {
+//   Task.findOne({
+//     _id: req.params.taskId,
+//     _listId: req.params.listId
+//   }).then((task) => {
+//     res.send(task)
+//   })
+// })
+
+/**
+ * POST /lists/:listId/tasks
+ * Purpose: Create a new task in a specific list
+ */
+app.post('/lists/:listId/tasks', (req, res) => {
+  // create a new task in a list specified by listId
+  let newTask = new Task({
+    title: req.body.title,
+    _listId: req.params.listId
+  });
+  newTask.save().then((newTaskDoc) => {
+    res.send(newTaskDoc);
+  });
+})
+
+/**
+ * PATCH /lists/:listId/tasks/:taskId
+ * Purpose: Create a new task in a specific list
+ */
+app.patch('/lists/:listId/tasks/:taskId', (req, res) => {
+  // update task specified by task id
+  Task.findOneAndUpdate({
+    _id: req.params.taskId,
+    _listId: req.params.listId
+  }, {
+        $set: req.body
+    }).then(() => {
+      res.sendStatus(200);
+    })
+});
+
+/**
+ * DELETE /lists/:listId/tasks/:taskId
+ * Purpose: Delete a task
+ */
+app.delete('/lists/:listId/tasks/:taskId', (req, res) => {
+  Task.findOneAndRemove({
+    _id: req.params.taskId,
+    _listId: req.params.listId
+  }).then((removedTaskDoc) => {
+    res.send(removedTaskDoc);
+  })
+});
+
+// app.listen(3000, () => {
+//   console.log('server is listening on port 3000');
+// });
