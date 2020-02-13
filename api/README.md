@@ -34,6 +34,7 @@
 
 ## Setup
 
+* Important note: This node.js app requires Mongodb to be installed and run. `C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe`
 * To start the server on _localhost://27017_ type: 'nodemon app.js'
 
 ## Code Examples
@@ -50,7 +51,7 @@
 
 ## Status & To-do list
 
-* Status: In progress
+* Status: Connecting with Mongodb. Requires testing of express verbs.
 
 * To-do: complete backend - fix Mongo network error - and integrate with front end. 
 

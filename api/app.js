@@ -2,11 +2,10 @@ const express = require('express');
 const app = express();
 
 const { mongoose } = require('./db/mongoose');
-mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true});
 
 const bodyParser = require('body-parser');
 
-// load in the mongoose models
+// load the mongoose models
 const { List, Task } = require('./db/models');
 
 // Load middleware
@@ -22,8 +21,12 @@ app.use(bodyParser.json());
  */
 app.get('/lists', (req, res) => {
   // return an array of lists in the database
-  List.find({}).then((lists) => {
-    res.send(lists);
+  List.find({
+
+  }).then((lists) => {
+      res.send(lists);
+  }).catch((e) => {
+      res.send(e);
   });
 });
 
@@ -54,7 +57,7 @@ app.patch('/lists/:id', (req, res) => {
   List.findOneAndUpdate({ _id: req.params.id }, {
     $set: req.body
   }).then(() => {
-    res.sendStatus(200);
+    res.send({ 'message': 'updated successfully'});
   });
 });
 
@@ -137,6 +140,6 @@ app.delete('/lists/:listId/tasks/:taskId', (req, res) => {
   })
 });
 
-// app.listen(3000, () => {
-//   console.log('server is listening on port 3000');
-// });
+app.listen(3000, () => {
+  console.log('server is listening on port 3000');
+});
