@@ -3,7 +3,10 @@
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/TaskManager', { useNewUrlParser: true }).then(() => {
+mongoose.connect('mongodb://localhost:27017/TaskManager', {
+  useUnifiedTopology: true,
+  useNewUrlParser: true
+}).then(() => {
   console.log('Connected to Mongodb successfully');
 }).catch((e) => {
   console.log('Error while trying to connect to Mongodb:', e)

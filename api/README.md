@@ -21,15 +21,17 @@
 
 ## Screenshots
 
-![Node.js page](./img/api.png)
+![Node.js page](./img/get.png)
 
 ## Technologies
 
 * [Node.js v12.4.0](https://nodejs.org/en/) asynchronous event-driven JavaScript runtime built on Chrome's V8 JavaScript engine.
 * [Mongoose v5.8.11](https://mongoosejs.com/) mongodb object modeling for node.js
+* [Postman v7.18.0](https://www.postman.com/downloads/) API Dev Environment
 * [Lodash v4.17.15](https://lodash.com/) Javascript utility library
 * [bcryptjs v2.4.3](https://www.npmjs.com/package/bcrypt) password hashing function
-* [jsonwebtoken v8.5.1](https://www.npmjs.com/package/jsonwebtoken) JSON Web Tokens.
+* [jsonwebtoken v8.5.1](https://www.npmjs.com/package/jsonwebtoken) JSON Web Tokens
+* [CORS on ExpressJS](https://enable-cors.org/server_expressjs.html)
 
 
 ## Setup
@@ -39,21 +41,32 @@
 
 ## Code Examples
 
-* 
+* Express app.get() method http GET request to return list of tasks for a specified List id.
 
 ```javascript
-
+/**
+ * GET /lists/:listId/tasks
+ * Purpose: Gets all tasks in a specific list
+ */
+app.get('/lists/:listId/tasks', (req, res) => {
+  // return all tasks that belong to a specific list
+  Task.find({
+    _listId: req.params.listId
+  }).then((tasks) => {
+    res.send(tasks);
+  })
+});
 ```
 
 ## Features
 
-* 
+* CORS header middleware used to avoid problems with same-origin policy and allow browser and server to communicate.
 
 ## Status & To-do list
 
-* Status: Connecting with Mongodb. Requires testing of express verbs.
+* Status: Fully working. Connecting with Mongodb. Postman successfully used to test POST, GET, PATCH, DELETE a list, POST, GET, PATCH, DELETE a task in a list.
 
-* To-do: complete backend - fix Mongo network error - and integrate with front end. 
+* To-do: complete integration of this backend API with the Angular Frontend.
 
 ## Inspiration
 

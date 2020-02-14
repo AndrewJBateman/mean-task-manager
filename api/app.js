@@ -11,6 +11,13 @@ const { List, Task } = require('./db/models');
 // Load middleware
 app.use(bodyParser.json());
 
+// CORS HEADERS MIDDLEWARE
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 /* ROUTE HANDLERS */
 
 /* LIST ROUTES */
@@ -20,7 +27,7 @@ app.use(bodyParser.json());
  * Purpose: get all lists
  */
 app.get('/lists', (req, res) => {
-  // return an array of lists in the database
+  // returns an array of lists in the database
   List.find({
 
   }).then((lists) => {
@@ -35,15 +42,15 @@ app.get('/lists', (req, res) => {
  * Purpose: create a list
  */
 app.post('/lists', (req, res) => {
-  // create a new list and return the list document back to the user, incl id
+  // creates a new list and returns the list document back to the user, including an id
   // list information fields will be passed in via the JSON request body
   let title = req.body.title;
-
   let newList = new List({
     title
   });
+
   newList.save().then((listDoc) => {
-    // full list doc is returned (incl id)
+    // full list doc is returned (including id)
     res.send(listDoc);
   });
 });
@@ -53,7 +60,7 @@ app.post('/lists', (req, res) => {
  * Purpose: Update a specified list
  */
 app.patch('/lists/:id', (req, res) => {
-  // update the specified list (list doc with id in the url) with new values specified in the JSON body
+  // updates the specified list (list doc with id in the url) with new values specified in the JSON body
   List.findOneAndUpdate({ _id: req.params.id }, {
     $set: req.body
   }).then(() => {
@@ -66,7 +73,7 @@ app.patch('/lists/:id', (req, res) => {
  * Purpose: Delete a list
  */
 app.delete('/lists/:id', (req, res) => {
-  // delete the specified list (using id in the url)
+  // deletes the specified list (using id in the url)
   List.findOneAndRemove({
     _id: req.params.id
   }).then((removedListDoc) => {
@@ -76,10 +83,10 @@ app.delete('/lists/:id', (req, res) => {
 
 /**
  * GET /lists/:listId/tasks
- * Purpose: Get all tasks in a specific list
+ * Purpose: Gets all tasks in a specific list
  */
 app.get('/lists/:listId/tasks', (req, res) => {
-  // return all tasks that belong to a specific list
+  // returns all tasks that belong to a specific list
   Task.find({
     _listId: req.params.listId
   }).then((tasks) => {
@@ -101,7 +108,7 @@ app.get('/lists/:listId/tasks', (req, res) => {
  * Purpose: Create a new task in a specific list
  */
 app.post('/lists/:listId/tasks', (req, res) => {
-  // create a new task in a list specified by listId
+  // creates a new task in a list specified by listId
   let newTask = new Task({
     title: req.body.title,
     _listId: req.params.listId
@@ -113,10 +120,10 @@ app.post('/lists/:listId/tasks', (req, res) => {
 
 /**
  * PATCH /lists/:listId/tasks/:taskId
- * Purpose: Create a new task in a specific list
+ * Purpose: Update a task in a list specified by listId
  */
 app.patch('/lists/:listId/tasks/:taskId', (req, res) => {
-  // update task specified by task id
+  // updates task specified by task id
   Task.findOneAndUpdate({
     _id: req.params.taskId,
     _listId: req.params.listId

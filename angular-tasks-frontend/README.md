@@ -49,7 +49,7 @@
 
 ## Status & To-do list
 
-* Status: In progress. Video 3 completed - needs testing with Postman.
+* Status: In progress. Video 4 completed.
 
 * To-do: complete tutorial videos up to video 15.
 
