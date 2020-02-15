@@ -45,7 +45,7 @@
 
 ## Status & To-do list
 
-* Status: Tutorial 5 of 15 complete. Front and backends working together. Backend connecting with Mongodb. Postman successfully used to test POST, GET, PATCH, DELETE a list, POST, GET, PATCH, DELETE a task in a list.
+* Status: Tutorial 6 of 15 complete. Lists and Task can be created. Front and backends working together. Backend connecting with Mongodb. Postman successfully used to test POST, GET, PATCH, DELETE a list, POST, GET, PATCH, DELETE a task in a list.
 
 * To-do: complete rest of tutorials.
 

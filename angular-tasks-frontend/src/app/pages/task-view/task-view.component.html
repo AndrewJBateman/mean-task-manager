@@ -18,14 +18,22 @@
       <button class="button is-primary has-text-white" routerLink="/new-list">+ New List</button>
     </div>
 
-    <div class="tasks-list-container has-background-light">
+    <div class="task-list-container has-background-light">
       <h1 class="title has-text-primary">
         Tasks
       </h1>
 
+      <!--task elements-->
       <div class="task" *ngFor="let task of tasks">
         <p>{{ task.title }}</p>
       </div>
+
+      <button 
+        class="circle-add-button button is-primary"
+        routerLink="./new-task">
+        <img src="../../../assets/plus-icon.svg">
+      </button>
+
     </div>
   </div>
 </div>
