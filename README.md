@@ -19,7 +19,7 @@
 
 ## General info
 
-* Note: it is not possible to see the Mongodb results on `http://localhost:27017/TaskManager` becuase: the Angular app has to communicate with the Express server app (using get, post etc.), and the Express server app will communicate with the MongoDB server. The Angular app cannot communicate with the MongoDB server directly (this would create all kinds of security issues).
+* Note: it is not possible to see the Mongodb results on `http://localhost:27017/TaskManager` because: the Angular app has to communicate with the Express server app (using get, post etc.), and the Express server app will communicate with the MongoDB server. The Angular app cannot communicate with the MongoDB server directly (this would create all kinds of security issues).
 
 ## Screenshots
 
@@ -45,7 +45,7 @@
 
 ## Status & To-do list
 
-* Status: Tutorial 6 of 15 complete. Lists and Task can be created. Front and backends working together. Backend connecting with Mongodb. Postman successfully used to test POST, GET, PATCH, DELETE a list, POST, GET, PATCH, DELETE a task in a list.
+* Status: Tutorial 9 of 15 complete. Lists and Task can be created. Front and backends working together. Backend connecting with Mongodb. Postman successfully used to test POST, GET, PATCH, DELETE a list, POST, GET, PATCH, DELETE a task in a list. Signup authentication working in Postman.
 
 * To-do: complete rest of tutorials.
 
