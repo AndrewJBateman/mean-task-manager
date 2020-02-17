@@ -19,7 +19,7 @@
 
 ## Screenshots
 
-![Angular page](./img/tasks.png)
+![Angular page](./img/login.png)
 
 
 ## Technologies
@@ -28,6 +28,7 @@
 * [Angular material v8.2.3](https://material.angular.io/)
 * [Bulma v0.8.0](https://bulma.io/documentation/) CSS framework
 * [rxjs v6.4.0](https://angular.io/guide/rx-library) reactive programming library
+* [RxJS shareReplay](https://www.learnrxjs.io/learn-rxjs/operators/multicasting/sharereplay) Share source and replay specified number of emissions on subscription.
 
 ## Setup
 
@@ -43,4 +44,4 @@
 
 ## Features
 
-* 
+* User login page
