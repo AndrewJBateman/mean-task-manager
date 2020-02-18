@@ -144,7 +144,7 @@ app.post('/lists', authenticate, (req, res) => {
  * Purpose: Update a specified list
  */
 app.patch('/lists/:id', authenticate, (req, res) => {
-  // We want to update the specified list (list document with id in the URL) with the new values specified in the JSON body of the request
+  // Update the specified list (list document with id in the URL) with the new values specified in the JSON body of the request
   List.findOneAndUpdate({ _id: req.params.id, _userId: req.user_id }, {
     $set: req.body
   }).then(() => {
@@ -157,7 +157,7 @@ app.patch('/lists/:id', authenticate, (req, res) => {
  * Purpose: Delete a list
  */
 app.delete('/lists/:id', authenticate, (req, res) => {
-  // We want to delete the specified list (document with id in the URL)
+  // Delete the specified list (document with id in the URL)
   List.findOneAndRemove({
     _id: req.params.id,
     _userId: req.user_id
@@ -175,7 +175,7 @@ app.delete('/lists/:id', authenticate, (req, res) => {
  * Purpose: Get all tasks in a specific list
  */
 app.get('/lists/:listId/tasks', authenticate, (req, res) => {
-  // We want to return all tasks that belong to a specific list (specified by listId)
+  // Return all tasks that belong to a specific list (specified by listId)
   Task.find({
     _listId: req.params.listId
   }).then((tasks) => {
@@ -189,7 +189,7 @@ app.get('/lists/:listId/tasks', authenticate, (req, res) => {
  * Purpose: Create a new task in a specific list
  */
 app.post('/lists/:listId/tasks', authenticate, (req, res) => {
-  // We want to create a new task in a list specified by listId
+  // Create a new task in a list specified by listId
 
   List.findOne({
     _id: req.params.listId,
@@ -223,7 +223,7 @@ app.post('/lists/:listId/tasks', authenticate, (req, res) => {
  * Purpose: Update an existing task
  */
 app.patch('/lists/:listId/tasks/:taskId', authenticate, (req, res) => {
-  // We want to update an existing task (specified by taskId)
+  // Update an existing task (specified by taskId)
 
   List.findOne({
     _id: req.params.listId,
@@ -357,7 +357,7 @@ app.post('/users/login', (req, res) => {
  * Purpose: generates and returns an access token
  */
 app.get('/users/me/access-token', verifySession, (req, res) => {
-  // we know that the user/caller is authenticated and we have the user_id and user object available to us
+  // we know that the user/caller is authenticated and we have the user_id and user object
   req.userObject.generateAccessAuthToken().then((accessToken) => {
     res.header('x-access-token', accessToken).send({ accessToken });
   }).catch((e) => {

@@ -60,3 +60,4 @@ app.get('/lists/:listId/tasks', (req, res) => {
 ## Features
 
 * CORS header middleware used to avoid problems with same-origin policy and allow browser and server to communicate.
+* Mongoose [model.deleteMany](https://mongoosejs.com/docs/api/model.html#model_Model.deleteMany) method used.
