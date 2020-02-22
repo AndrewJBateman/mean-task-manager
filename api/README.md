@@ -15,8 +15,9 @@
 
 ## General info
 
-* Backend API using Node.js with Mongoose and Express.
-* Includes sign-up/log-in using JWT authentication web tokens.
+* Backend API using Node.js with Mongoose and Express
+* Includes sign-up/log-in using JWT authentication web tokens
+* If local storage cleared via google dev tools Application-Storage then app correctly reverts to /login page.
 
 ## Screenshots
 
@@ -59,5 +60,6 @@ app.get('/lists/:listId/tasks', (req, res) => {
 
 ## Features
 
-* CORS header middleware used to avoid problems with same-origin policy and allow browser and server to communicate.
-* Mongoose [model.deleteMany](https://mongoosejs.com/docs/api/model.html#model_Model.deleteMany) method used.
+* CORS header middleware used to avoid problems with same-origin policy and allow browser and server to communicate
+* Mongoose [model.deleteMany](https://mongoosejs.com/docs/api/model.html#model_Model.deleteMany) method used
+* local storage used to store auth tokens

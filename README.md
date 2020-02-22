@@ -19,33 +19,32 @@
 
 ## General info
 
-* Note: it is not possible to see the Mongodb results on `http://localhost:27017/TaskManager` because: the Angular app has to communicate with the Express server app (using get, post etc.), and the Express server app will communicate with the MongoDB server. The Angular app cannot communicate with the MongoDB server directly (this would create all kinds of security issues).
+* Note: it is not possible to see the Mongodb results on `http://localhost:27017/TaskManager` because: the Angular app has to communicate with the Express server app (using get, post etc.), and the Express server app will communicate with the MongoDB server. The Angular app cannot communicate with the MongoDB server directly (due to potential security issues)
 
 ## Screenshots
 
+![Angular page](./img/postman-access.png)
+![Angular page](./img/postman.png)
 ![Angular page](./img/lists.png)
 
 
 ## Technologies
 
-* See `angular-tasks-frontend` and `api` backend folders for technologies used.
+* See `angular-tasks-frontend` and `api` backend folders for technologies used
 * [Postman v7.18.0](https://www.postman.com/downloads/) API Dev Environment used to test app
 
 ## Setup
 
-* See `angular-tasks-frontend` and `api` backend folders for individual setups.
+* See `angular-tasks-frontend` and `api` backend folders for individual setups. You need to have both front and back ends running for the app to work.
 
-## Code Examples
-
-* See `angular-tasks-frontend` and `api` backend folders for code examples.
-
-## Features
-
-* 
 
 ## Status & To-do list
 
-* Status: All 15 tutorials completed. Lists and Task can be created. Front and backends working together. Backend connecting with Mongodb. Postman successfully used to test POST, GET, PATCH, DELETE a list, POST, GET, PATCH, DELETE a task in a list. Signup authentication working in Postman. Login page coded. Authentication middleware added to all API routes to user can only ever Create, Read, Update or Delete their own lists/tasks. User can login and has access to lsits page and can create his own lists and tasks. A new user has a different access token and can only access his own lists and tasks.
+* Status: All 15 tutorials completed. User can sign up and login
+* Lists and Task can be created with front and back ends working together & backend connects with a Mongodb database
+* Postman successfully used to test POST, GET, PATCH, DELETE a list, POST, GET, PATCH, DELETE a task in a list
+* Authentication middleware added to all API routes so user can only ever Create, Read, Update or Delete their own lists/tasks
+* Front and back ends pass data via localhost://3000
 
 * To-do: Add comments. Add check if signup user already exists - currently causes an error. Add logout function.
 
@@ -67,6 +66,7 @@
 * [Updating and Deleting Lists & Tasks - [14] Build a Task Manager w/ Angular, NodeJS and MongoDB](https://www.youtube.com/watch?v=XM-1lNLuJjg&list=PLIjdNHWULhPSZFDzQU6AnbVQNNo1NTRpd&index=14)
 * [Finishing up - [15] Build a Task Manager w/ Angular, NodeJS and MongoDB](https://www.youtube.com/watch?v=HuC9YebfPMQ&list=PLIjdNHWULhPSZFDzQU6AnbVQNNo1NTRpd&index=15)
 * [Devstackr: Github repo](https://github.com/Devstackr/task-manager-mean-stack)
+* [Auth0: Refresh Tokens: When to Use Them and How They Interact with JWTs](https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/)
 
 ## Contact
 
