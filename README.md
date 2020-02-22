@@ -23,7 +23,7 @@
 
 ## Screenshots
 
-![Angular page](./img/view.png)
+![Angular page](./img/lists.png)
 
 
 ## Technologies
@@ -45,9 +45,9 @@
 
 ## Status & To-do list
 
-* Status: Tutorial 13 of 15 completed. Lists and Task can be created. Front and backends working together. Backend connecting with Mongodb. Postman successfully used to test POST, GET, PATCH, DELETE a list, POST, GET, PATCH, DELETE a task in a list. Signup authentication working in Postman. Login page coded. Authentication middleware added to all API routes to user can only ever Create, Read, Update or Delete their own lists/tasks. User can login and has access to lsits page and can create his own lists and tasks. A new user has a different access token and can only access his own lists and tasks.
+* Status: All 15 tutorials completed. Lists and Task can be created. Front and backends working together. Backend connecting with Mongodb. Postman successfully used to test POST, GET, PATCH, DELETE a list, POST, GET, PATCH, DELETE a task in a list. Signup authentication working in Postman. Login page coded. Authentication middleware added to all API routes to user can only ever Create, Read, Update or Delete their own lists/tasks. User can login and has access to lsits page and can create his own lists and tasks. A new user has a different access token and can only access his own lists and tasks.
 
-* To-do: complete up to tutorial 15 and comment all.
+* To-do: Add comments. Add check if signup user already exists - currently causes an error. Add logout function.
 
 ## Inspiration
 

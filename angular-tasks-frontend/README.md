@@ -19,6 +19,7 @@
 
 ## Screenshots
 
+![Angular page](./img/signup.png)
 ![Angular page](./img/login.png)
 
 
@@ -37,12 +38,39 @@
 
 ## Code Examples
 
-* 
+* Signup function - uses authService signup function
 
 ```typescript
+// sign-up page
+onSignupButtonClicked(email: string, password: string) {
+    this.authService.signup(email, password).subscribe((res: HttpResponse<any>) => {
+      console.log(res);
+      this.router.navigate(['/lists']);
+    });
+  }
+  // auth.service.ts
+  signup(email: string, password: string) {
+    return this.webService.signup(email, password).pipe(
+      shareReplay(),
+      tap((res: HttpResponse<any>) => {
+        // auth tokens will be in the header
+        this.setSession(res.body._id, res.headers.get('x-access-token'), res.headers.get('x-refresh-token'));
+        console.log('Successfully signed up and logged in');
+      })
+    )
+  }
 
+  // web-request.service.ts post user signup data to backend api
+  signup(email: string, password: string) {
+    return this.http.post(`${this.ROOT_URL}/users`, {
+      email,
+      password
+    }, {
+      observe: 'response'
+    });
+  }
 ```
 
 ## Features
 
-* 
+* Successful sign up or logic redirects (new) user to list page.
