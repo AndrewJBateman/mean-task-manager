@@ -41,6 +41,7 @@
 ## Status & To-do list
 
 * Status: All 15 tutorials completed. User can sign up and login
+* Frontend updated to latest version of Angular 9
 * Lists and Task can be created with front and back ends working together & backend connects with a Mongodb database
 * Postman successfully used to test POST, GET, PATCH, DELETE a list, POST, GET, PATCH, DELETE a task in a list
 * Authentication middleware added to all API routes so user can only ever Create, Read, Update or Delete their own lists/tasks

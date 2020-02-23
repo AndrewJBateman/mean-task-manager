@@ -26,7 +26,7 @@
 ## Technologies
 
 * [Node.js v12.4.0](https://nodejs.org/en/) asynchronous event-driven JavaScript runtime built on Chrome's V8 JavaScript engine.
-* [Mongoose v5.8.11](https://mongoosejs.com/) mongodb object modeling for node.js
+* [Mongoose v5.9.2](https://mongoosejs.com/) mongodb object modeling for node.js
 * [Lodash v4.17.15](https://lodash.com/) Javascript utility library
 * [bcryptjs v2.4.3](https://www.npmjs.com/package/bcrypt) password hashing function
 * [jsonwebtoken v8.5.1](https://www.npmjs.com/package/jsonwebtoken) JSON Authentication Web Tokens
