@@ -1,43 +1,42 @@
-# Angular Frontend for MEAN Stack Task Manager - Tutorial Code by Devstakr
+# :zap: Angular Frontend for MEAN Stack Task Manager - Tutorial Code by Devstakr
 
 * All code by [Devstackr](https://www.youtube.com/channel/UCbwsS1m4Hib6R-9F1alus_A/featured).
 
-## Table of contents
+## :page_facing_up: Table of contents
 
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+* [:zap: Angular Frontend for MEAN Stack Task Manager - Tutorial Code by Devstakr](#zap-angular-frontend-for-mean-stack-task-manager---tutorial-code-by-devstakr)
+  * [:page_facing_up: Table of contents](#pagefacingup-table-of-contents)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signalstrength-technologies)
+  * [:floppy_disk: Setup](#floppydisk-setup)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features](#cool-features)
 
-## General info
+## :books: General info
 
 * Angular 9 used to provide a user frontend interface to Create, Read, Update, and Delete (CRUD) lists and tasks. Pages for signup and login.
 
-## Screenshots
+## :camera: Screenshots
 
 ![Angular page](./img/signup.png)
 ![Angular page](./img/login.png)
 ![Angular page](./img/lists-tokens.png)
 
+## :signal_strength: Technologies
 
-## Technologies
-
-* [Angular v9.1.0](https://angular.io/)
-* [Angular CLI v9.1.0](https://material.angular.io/)
+* [Angular v9](https://angular.io/)
+* [Angular CLI v9](https://material.angular.io/)
 * [Fontawesome](https://fontawesome.com/kits/b7c269bd48/use) how to add kit number to html header
 * [Bulma v0.8.0](https://bulma.io/documentation/) CSS framework
-* [rxjs v6.5.4](https://angular.io/guide/rx-library) reactive programming library
+* [rxjs v6](https://angular.io/guide/rx-library) reactive programming library
 * [RxJS shareReplay](https://www.learnrxjs.io/learn-rxjs/operators/multicasting/sharereplay) Share source and replay specified number of emissions on subscription.
 
-## Setup
+## :floppy_disk: Setup
 
 * To start the server on _localhost://4200_ type: 'ng serve'
 
-## Code Examples
+## :computer: Code Examples
 
 * Signup function - uses authService signup function
 
@@ -72,6 +71,6 @@ signup(email: string, password: string) {
 }
 ```
 
-## Features
+## :cool: Features
 
 * Successful sign up or login redirects (new) user to task lists page.

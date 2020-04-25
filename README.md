@@ -1,49 +1,46 @@
-# MEAN Stack Task Manager - Tutorial Code by Devstakr
+# :zap: MEAN Stack Task Manager - Tutorial Code by Devstakr
 
 * See `angular-tasks-frontend` folder for Angular frontend code.
-
 * See `api` folder for backend API using Node.js with Mongoose and Express.
-
 * All code by [Devstackr](https://www.youtube.com/channel/UCbwsS1m4Hib6R-9F1alus_A/featured).
 
-## Table of contents
+## :page_facing_up: Table of contents
 
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Features](#features)
-* [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
+* [:zap: MEAN Stack Task Manager - Tutorial Code by Devstakr](#zap-mean-stack-task-manager---tutorial-code-by-devstakr)
+  * [:page_facing_up: Table of contents](#pagefacingup-table-of-contents)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signalstrength-technologies)
+  * [:floppy_disk: Setup](#floppydisk-setup)
+  * [:clipboard: Status & To-do list](#clipboard-status--to-do-list)
+  * [Inspiration](#inspiration)
+  * [:envelope: Contact](#envelope-contact)
 
-## General info
+## :books: General info
 
 * Note: it is not possible to see the Mongodb results on `http://localhost:27017/TaskManager` because: the Angular app has to communicate with the Express server app (using get, post etc.), and the Express server app will communicate with the MongoDB server. The Angular app cannot communicate with the MongoDB server directly (due to potential security issues)
 
-## Screenshots
+## :camera: Screenshots
 
 ![Angular page](./img/postman-access.png)
 ![Angular page](./img/postman.png)
 ![Angular page](./img/lists.png)
 
-
-## Technologies
+## :signal_strength: Technologies
 
 * See `angular-tasks-frontend` and `api` backend folders for technologies used
-* [Postman v7.18.0](https://www.postman.com/downloads/) API Dev Environment used to test app
+* [Postman v7](https://www.postman.com/downloads/) API Dev Environment used to test app
 
-## Setup
+## :floppy_disk: Setup
 
 * See `angular-tasks-frontend` and `api` backend folders for individual setups. You need to have both front and back ends running for the app to work.
 
-
-## Status & To-do list
+## :clipboard: Status & To-do list
 
 * Status: All 15 tutorials completed. User can sign up and login
 * Frontend updated to latest version of Angular 9
 * Lists and Task can be created with front and back ends working together & backend connects with a Mongodb database
-* Postman successfully used to test POST, GET, PATCH, DELETE a list, POST, GET, PATCH, DELETE a task in a list
+* Postman successfully used to test POST, GET, PATCH, DELETE lists and tasks in a list
 * Authentication middleware added to all API routes so user can only ever Create, Read, Update or Delete their own lists/tasks
 * Front and back ends pass data via localhost://3000
 
@@ -69,6 +66,6 @@
 * [Devstackr: Github repo](https://github.com/Devstackr/task-manager-mean-stack)
 * [Auth0: Refresh Tokens: When to Use Them and How They Interact with JWTs](https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/)
 
-## Contact
+## :envelope: Contact
 
-Repo created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!
+* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)

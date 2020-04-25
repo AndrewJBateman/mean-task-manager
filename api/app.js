@@ -29,7 +29,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-
 // check whether the request has a valid JWT access token
 let authenticate = (req, res, next) => {
   let token = req.header('x-access-token');
@@ -304,7 +303,7 @@ app.post('/users', (req, res) => {
     return newUser.createSession();
   }).then((refreshToken) => {
     // Session created successfully - refreshToken returned.
-    // now we geneate an access auth token for the user
+    // now generate access auth token for the user
 
     return newUser.generateAccessAuthToken().then((accessToken) => {
       // access auth token generated successfully, now we return an object containing the auth tokens
@@ -374,7 +373,6 @@ let deleteTasksFromList = (_listId) => {
     console.log("Tasks from " + _listId + " were deleted!");
   })
 }
-
 
 app.listen(3000, () => {
   console.log("Server is listening on port 3000");
