@@ -7,11 +7,11 @@
 ## :page_facing_up: Table of contents
 
 * [:zap: MEAN Stack Task Manager - Tutorial Code by Devstakr](#zap-mean-stack-task-manager---tutorial-code-by-devstakr)
-  * [:page_facing_up: Table of contents](#pagefacingup-table-of-contents)
+  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies](#signalstrength-technologies)
-  * [:floppy_disk: Setup](#floppydisk-setup)
+  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:floppy_disk: Setup](#floppy_disk-setup)
   * [:clipboard: Status & To-do list](#clipboard-status--to-do-list)
   * [Inspiration](#inspiration)
   * [:envelope: Contact](#envelope-contact)
@@ -37,14 +37,15 @@
 
 ## :clipboard: Status & To-do list
 
-* Status: All 15 tutorials completed. User can sign up and login
-* Frontend updated to latest version of Angular 9
+* Status: Working
+* All 15 tutorials completed. User can sign up and login
+* Frontend updated to latest version of Angular 10
 * Lists and Task can be created with front and back ends working together & backend connects with a Mongodb database
 * Postman successfully used to test POST, GET, PATCH, DELETE lists and tasks in a list
 * Authentication middleware added to all API routes so user can only ever Create, Read, Update or Delete their own lists/tasks
 * Front and back ends pass data via localhost://3000
 
-* To-do: Add comments. Add check if signup user already exists - currently causes an error. Add logout function.
+* To-do: Change to cloud MngoDB. Add comments. Add check if signup user already exists - currently causes an error. Add logout function.
 
 ## Inspiration
 
