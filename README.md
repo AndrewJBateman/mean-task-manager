@@ -39,13 +39,13 @@
 
 * Status: Working
 * All 15 tutorials completed. User can sign up and login
-* Frontend updated to latest version of Angular 10
+* Frontend updated to latest version of Angular 11
 * Lists and Task can be created with front and back ends working together & backend connects with a Mongodb database
 * Postman successfully used to test POST, GET, PATCH, DELETE lists and tasks in a list
 * Authentication middleware added to all API routes so user can only ever Create, Read, Update or Delete their own lists/tasks
 * Front and back ends pass data via localhost://3000
 
-* To-do: Change to cloud MngoDB. Add comments. Add check if signup user already exists - currently causes an error. Add logout function.
+* To-do: Change to cloud MongoDB. Add comments. Add check if signup user already exists - currently causes an error. Add logout function.
 
 ## Inspiration
 
@@ -66,6 +66,7 @@
 * [Finishing up - [15] Build a Task Manager w/ Angular, NodeJS and MongoDB](https://www.youtube.com/watch?v=HuC9YebfPMQ&list=PLIjdNHWULhPSZFDzQU6AnbVQNNo1NTRpd&index=15)
 * [Devstackr: Github repo](https://github.com/Devstackr/task-manager-mean-stack)
 * [Auth0: Refresh Tokens: When to Use Them and How They Interact with JWTs](https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/)
+* [Typescript website](https://www.typescriptlang.org/)
 
 ## :envelope: Contact
 

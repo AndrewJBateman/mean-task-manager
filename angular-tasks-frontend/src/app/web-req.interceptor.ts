@@ -29,7 +29,6 @@ export class WebReqInterceptor implements HttpInterceptor {
         console.log(error);
 
         if (error.status === 401) {
-
           // refresh access token
           return this.refreshAccessToken().pipe(
             switchMap(() => {
@@ -61,7 +60,7 @@ export class WebReqInterceptor implements HttpInterceptor {
       });
     } else {
       this.refreshingAccessToken = true;
-      
+
       // call auth service request to refresh access token
       return this.authService.getNewAccessToken().pipe(
         tap(() => {

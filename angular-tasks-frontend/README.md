@@ -15,7 +15,8 @@
 
 ## :books: General info
 
-* Angular 10 used to provide a user frontend interface to Create, Read, Update, and Delete (CRUD) lists and tasks. Pages for signup and login.
+* Angular 11 used to provide a user frontend interface to Create, Read, Update, and Delete (CRUD) lists and tasks.
+* Includes pages for signup and login.
 
 ## :camera: Screenshots
 
@@ -25,16 +26,16 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v10](https://angular.io/)
-* [Angular CLI v10](https://material.angular.io/)
+* [Angular v11](https://angular.io/)
 * [Fontawesome](https://fontawesome.com/kits/b7c269bd48/use) how to add kit number to html header
-* [Bulma v0.8.0](https://bulma.io/documentation/) CSS framework
+* [Bulma v0.9.1](https://bulma.io/documentation/) CSS framework
 * [rxjs v6](https://angular.io/guide/rx-library) reactive programming library
 * [RxJS shareReplay](https://www.learnrxjs.io/learn-rxjs/operators/multicasting/sharereplay) Share source and replay specified number of emissions on subscription.
 
 ## :floppy_disk: Setup
 
-* To start the server on _localhost://4200_ type: 'ng serve'
+* Run `npm i` to install dependencies
+* Run `ng serve` to start the server on _localhost://4200_
 
 ## :computer: Code Examples
 
