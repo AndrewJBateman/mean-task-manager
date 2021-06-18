@@ -3,6 +3,12 @@
 * See `angular-tasks-frontend` folder for Angular frontend code.
 * See `api` folder for backend API using Node.js with Mongoose and Express.
 * All code by [Devstackr](https://www.youtube.com/channel/UCbwsS1m4Hib6R-9F1alus_A/featured).
+* **Note:** to open web links in a new window use: _ctrl+click on link_
+
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/mean-task-manager?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/mean-task-manager?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/mean-task-manager?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/mean-task-manager?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -37,9 +43,8 @@
 
 ## :clipboard: Status & To-do list
 
-* Status: Working
+* Status: Working.Updated june 2021
 * All 15 tutorials completed. User can sign up and login
-* Frontend updated to latest version of Angular 11
 * Lists and Task can be created with front and back ends working together & backend connects with a Mongodb database
 * Postman successfully used to test POST, GET, PATCH, DELETE lists and tasks in a list
 * Authentication middleware added to all API routes so user can only ever Create, Read, Update or Delete their own lists/tasks
@@ -68,6 +73,10 @@
 * [Auth0: Refresh Tokens: When to Use Them and How They Interact with JWTs](https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/)
 * [Typescript website](https://www.typescriptlang.org/)
 
+## :file_folder: License
+
+* N/A.
+
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
