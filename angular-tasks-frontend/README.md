@@ -15,7 +15,7 @@
 
 ## :books: General info
 
-* Angular 11 used to provide a user frontend interface to Create, Read, Update, and Delete (CRUD) lists and tasks.
+* Angular used to provide a user frontend interface to Create, Read, Update, and Delete (CRUD) lists and tasks.
 * Includes pages for signup and login.
 
 ## :camera: Screenshots
@@ -26,7 +26,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v11](https://angular.io/)
+* [Angular v12](https://angular.io/)
 * [Fontawesome](https://fontawesome.com/kits/b7c269bd48/use) how to add kit number to html header
 * [Bulma v0.9.1](https://bulma.io/documentation/) CSS framework
 * [rxjs v6](https://angular.io/guide/rx-library) reactive programming library
