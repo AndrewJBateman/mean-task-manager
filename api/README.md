@@ -25,7 +25,7 @@
 
 ## :signal_strength: Technologies
 
-* [Node.js v12](https://nodejs.org/en/) asynchronous event-driven JavaScript runtime built on Chrome's V8 JavaScript engine.
+* [Node.js v14](https://nodejs.org/en/) asynchronous event-driven JavaScript runtime built on Chrome's V8 JavaScript engine.
 * [Mongoose v5](https://mongoosejs.com/) mongodb object modeling for node.js
 * [Lodash v4](https://lodash.com/) Javascript utility library
 * [bcryptjs v2](https://www.npmjs.com/package/bcrypt) password hashing function
@@ -37,6 +37,7 @@
 
 * Important note: This node.js app requires Mongodb to be installed and run. `C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe`
 * To start the server on _localhost://27017_ type: 'nodemon app.js'
+* Alternatively run using Cloud Atlas online database
 
 ## :computer: Code Examples
 
